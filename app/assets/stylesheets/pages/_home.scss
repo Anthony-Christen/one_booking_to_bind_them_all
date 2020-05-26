@@ -1,1 +1,24 @@
 // Specific CSS for your home-page
+body {
+  font-family: roboto;
+  color: $gray;
+}
+
+h1 {
+  font-family: roboto;
+  font-weight: 60px;
+  color: $strongpurple;
+}
+
+
+h2 {
+  font-family: roboto;
+  font-weight: 60px;
+  color: $mediumpurple;
+}
+
+p {
+  font-family: roboto;
+  font-weight: 36px;
+  color: $gray;
+}
