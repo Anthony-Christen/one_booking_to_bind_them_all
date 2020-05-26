@@ -1,0 +1,9 @@
+<h1>Services#new</h1>
+
+<%= simple_form_for @service do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :category %>
+  <%= f.input :price %>
+  <%= f.submit %>
+<% end %>
