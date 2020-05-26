@@ -1,0 +1,7 @@
+<h1>Services#index</h1>
+
+<ul>
+  <% @services.each do |service| %>
+  <li><%= link_to service.name, service_path(service) %> - <%= service.user.first_name %> - <%= service.price %>$</li>
+  <% end %>
+</ul>
