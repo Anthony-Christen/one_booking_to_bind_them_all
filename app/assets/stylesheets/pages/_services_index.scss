@@ -1,0 +1,14 @@
+.services-index-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+ul.services-index-flexbox {
+  list-style: none;
+}
+
+.services-index-flexbox .card-category {
+  width: 300px;
+  margin-bottom: 25px;
+}
