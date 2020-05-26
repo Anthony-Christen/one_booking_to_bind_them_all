@@ -27,7 +27,7 @@
         <%= link_to "Games", "#", class: "nav-link" %>
       </li>
 
-    <% # if user_signed_in? %>
+    <% if user_signed_in? %>
      <li class="nav-item">
        <%= link_to "My account", "#", class: "nav-link" %>
      </li>
@@ -38,14 +38,14 @@
          <%= link_to "Log out", "#", class: "dropdown-item" %>
        </div>
      </li>
-     <% # else %>
+     <% else %>
        <li class="nav-item">
          <%= link_to "Sign-in", "#", class: "nav-link" %>
        </li>
        <li class="nav-item">
          <%= link_to "Sign-up", "#", class: "nav-link" %>
        </li>
-      <% # end %>
+      <% end %>
     </ul>
   </div>
 </div>

@@ -1,2 +1,9 @@
 <h1>Services#new</h1>
-<p>Find me in app/views/services/new.html.erb</p>
+
+<%= simple_form_for @service do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :category %>
+  <%= f.input :price %>
+  <%= f.submit %>
+<% end %>
