@@ -10,11 +10,13 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
+    authorize @service
   end
 
   def create
     @service = Service.new(service_params)
     @service.user = current_user
+    authorize @service
     @service.save!
   end
 
