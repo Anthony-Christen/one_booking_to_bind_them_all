@@ -1,7 +1,8 @@
 class ServicesController < ApplicationController
   def index
     @services = Service.all
-    authorize @service
+    @services = policy_scope(Service).order(created_at: :desc)
+    authorize @services
   end
 
   def show
