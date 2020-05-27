@@ -1,0 +1,9 @@
+
+<h3>Book a coaching for <%= @service.name %></h3>
+<p><%= @service.description %></p>
+
+<%= simple_form_for [@service, @booking] do |f| %>
+  <%= f.input :date %>
+  <%= f.input :duration %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
