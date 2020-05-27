@@ -17,3 +17,12 @@
     font-size: 20px;
   }
 }
+
+.card-infos .btn-flat {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+  }
+}
