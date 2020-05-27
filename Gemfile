@@ -6,6 +6,9 @@ ruby '2.6.6'
 # seeding DB through faker
 gem 'faker'
 
+#uploading photo
+gem 'cloudinary'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 # Use postgresql as the database for Active Record
@@ -34,6 +37,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'pundit'
 
 group :development, :test do
   gem 'pry-byebug'
