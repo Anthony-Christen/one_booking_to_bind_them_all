@@ -1,5 +1,6 @@
 <div class="banner">
   <h1>Services</h1>
+  <%= link_to 'Create service', new_service_path(@service), class: "btn-flat" %>
 </div>
 
 <div class="container">
@@ -9,9 +10,6 @@
         <%= link_to service_path(service) do %>
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
             <%= service.name %>
-          </div>
-          <div>
-            <%= link_to 'Create service', new_service_path(@service), class: "btn-flat" %>
           </div>
         <% end %>
       </li>

@@ -22,6 +22,7 @@ ul.services-index-flexbox {
   background-repeat: no-repeat;
   margin-bottom: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
