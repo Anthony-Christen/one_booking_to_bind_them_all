@@ -1,6 +1,7 @@
 class ServicesController < ApplicationController
   def index
     @services = Service.all
+    authorize @service
   end
 
   def show
