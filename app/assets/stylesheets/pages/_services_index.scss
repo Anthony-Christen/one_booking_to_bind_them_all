@@ -1,0 +1,27 @@
+.services-index-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+ul.services-index-flexbox {
+  list-style: none;
+}
+
+.services-index-flexbox .card-category {
+  width: 300px;
+  margin-bottom: 25px;
+}
+
+.services-index-banner {
+  height: 400px;
+  width: 100%;
+  background-image: url('https://www.abc.net.au/cm/rimage/10600704-16x9-xlarge.jpg?v=3');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
