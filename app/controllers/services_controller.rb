@@ -12,7 +12,17 @@ class ServicesController < ApplicationController
   end
 
   def create
+    @service = Service.new(service_params)
+    @service.user = current_user
+    @service.save!
   end
+
+  private
+
+  def service_params
+    params.require(:service).permit(:name, :description, :category, :price)
+  end
+
 
   def edit
   end
