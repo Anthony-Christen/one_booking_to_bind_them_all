@@ -1,3 +1,8 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-  Breakfast
+<!-- faire un loop sur les 6 card categories -->
+<div class="cards">
+  <% @services.each do |service| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <%= link_to service.name, service_path(service) %> - <%= service.user.first_name %> - <%= service.price %>
+  </div>
+  <% end %>
 </div>
