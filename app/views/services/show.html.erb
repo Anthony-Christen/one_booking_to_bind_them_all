@@ -1,5 +1,25 @@
-<h1>Services#show</h1>
-<p>name: <%= @service.name %></p>
-<p>description: <%= @service.description %></p>
-<p>category: <%= @service.category %></p>
-<p>price: <%= @service.price %>$</p>
+<div class="banner">
+  <h1><%= @service.name %></h1>
+</div>
+
+<div class="container">
+  <div class="card-infos">
+    <div class="card-infos-content">
+      <h3>Name</h3><p><%= @service.name %></p>
+    </div>
+    <div class="card-infos-content">
+      <h3>Category</h3><p><%= @service.category %></p>
+    </div>
+      <div class="card-infos-content">
+      <h3>Description</h3><p><%= @service.description %></p>
+    </div>
+      <div class="card-infos-content">
+      <h3>Price</h3><p><%= @service.price %>$</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
