@@ -20,6 +20,8 @@ class ServicesController < ApplicationController
     @service.user = current_user
     authorize @service
     @service.save!
+
+    redirect_to service_path(@service)
   end
 
   private
