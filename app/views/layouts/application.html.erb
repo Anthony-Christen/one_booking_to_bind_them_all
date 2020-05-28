@@ -20,8 +20,9 @@
     <% end %>
 
     <%= render "components/navbar" %>
-
-    <%= yield %>
+    <div class="full-screen">
+      <%= yield %>
+    </div>
 
     <%= render "components/footer" %>
   </body>
