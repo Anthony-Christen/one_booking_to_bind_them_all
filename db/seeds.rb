@@ -26,6 +26,16 @@ user = User.new(
     )
 user.save!
 
+puts 'Creating user antho...'
+user = User.new(
+    first_name: "Alexandre",
+    last_name: "Bouvier",
+    email:    "alex@gmail.com",
+    password: "azerty",
+    role: ["provider", "customer"].sample
+    )
+user.save!
+
 puts 'Creating 12 fake users...'
 12.times do
   user = User.new(
