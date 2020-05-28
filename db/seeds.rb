@@ -26,7 +26,7 @@ puts 'Fake users finished!'
 service = Service.new(
   name: "fortnight",
   description: "pro player level 100",
-  price: 30,
+  price: rand(30..150),
   image: "https://cdn2.unrealengine.com/Fortnite%2Fhome-v2%2FASPOT_Image-3840x2308-35330d4be45373960682e7ef88da5b4c2d8e790f.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
@@ -44,7 +44,7 @@ service.save!
 service = Service.new(
   name: "Rainbow Six",
   description: "Gain extra money for skins and leagues",
-  price: 30,
+  price: rand(30..150),
   image: "https://www.digiseller.ru/preview/748667/p1_2597316_e69f5bd8.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
@@ -62,7 +62,7 @@ service.save!
 service = Service.new(
   name: "Great Theft Auto",
   description: "gain rp and cash",
-  price: 30,
+  price: rand(30..150),
   image: "https://www.use-media.com/admin/files/pictures/2283/2283_4196_750_gta-5-artikelbild.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
@@ -80,7 +80,7 @@ service.save!
 service = Service.new(
   name: "FiFa",
   description: "Do you want to be part of the Frist League",
-  price: 30,
+  price: rand(30..150),
   image: "https://image-cdn.essentiallysports.com/wp-content/uploads/20200418223918/fifa-20-button-2020-1568061446797-1600x1600.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
@@ -89,7 +89,7 @@ service.save!
 service = Service.new(
   name: "The Last Of Us",
   description: "Stuck on a certain level or just at a boring part",
-  price: 30,
+  price: rand(30..150),
   image: "https://images-na.ssl-images-amazon.com/images/I/71lVmaGKEGL._AC_SY741_.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
