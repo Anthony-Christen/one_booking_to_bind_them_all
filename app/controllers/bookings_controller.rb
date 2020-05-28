@@ -1,5 +1,9 @@
 class BookingsController < ApplicationController
 
+  def index
+    @bookings = policy_scope(Booking).order(date: :desc)
+  end
+
   def new
     @service = Service.find(params[:service_id])
     @booking = Booking.new
