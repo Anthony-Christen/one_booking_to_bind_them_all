@@ -1,9 +1,13 @@
-
-<h3>Book a coaching for <%= @service.name %></h3>
-<p><%= @service.description %></p>
-
-<%= simple_form_for [@service, @booking] do |f| %>
-  <%= f.input :date %>
-  <%= f.input :duration %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
+<div class="container services-new">
+  <div class="services-new-form">
+    <div class="form-title">
+      <h3>Book a "<%= @service.name %>" coaching</h3>
+      <p>with <%= @service.user.first_name %> <%= @service.user.last_name %></p>
+    </div>
+    <%= simple_form_for [@service, @booking] do |f| %>
+      <%= f.input :date %>
+      <%= f.input :duration %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
