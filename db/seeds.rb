@@ -50,7 +50,7 @@ end
 puts 'Fake users finished!'
 
 service = Service.new(
-  name: "fortnite",
+  name: "Fortnite",
   description: "pro player level 100",
   price: rand(30..150),
   image: "https://cdn2.unrealengine.com/Fortnite%2Fhome-v2%2FASPOT_Image-3840x2308-35330d4be45373960682e7ef88da5b4c2d8e790f.jpg",
