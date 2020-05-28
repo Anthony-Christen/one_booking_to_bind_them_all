@@ -90,7 +90,7 @@ service = Service.new(
   name: "The Last Of Us",
   description: "Stuck on a certain level or just at a boring part",
   price: 30,
-  image: "https://images-na.ssl-images-amazon.com/images/I/71lVmaGKEGL._AC_SY741_.jpg",
+  image: "https://nationeditions.com/wp-content/uploads/2020/03/lastofus-696x442.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
   )
