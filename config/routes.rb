@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: [:index, :edit, :update,]
   # resources :users, only: [:new]
-
+  get '/my-services', to: 'pages#my_services'
 end
