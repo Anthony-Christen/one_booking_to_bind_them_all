@@ -15,8 +15,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to service_path(@service)
     else
-      @booking = Booking.new
-      render "services/show"
+      render :new
     end
   end
 
