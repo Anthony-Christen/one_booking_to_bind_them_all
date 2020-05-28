@@ -1,5 +1,9 @@
 class BookingsController < ApplicationController
 
+  def index
+    @bookings = policy_scope(Booking).order(date: :desc)
+  end
+
   def new
     @service = Service.find(params[:service_id])
     @booking = Booking.new
@@ -15,8 +19,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to service_path(@service)
     else
-      @booking = Booking.new
-      render "services/show"
+      render :new
     end
   end
 
