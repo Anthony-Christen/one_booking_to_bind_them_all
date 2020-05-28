@@ -1,22 +1,19 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @service.image %>)">
-  <h1><%= @service.name %></h1>
-  <img src="https://res.cloudinary.com/dhj2fdtwt/image/upload/v1590482689/taylor-harding-i4NoTSSCw5E-unsplash_cguk5u.jpg" class="avatar-bordered-big" />
-
+<div class="banner" style="background-image: url(<%= @service.image %>); height: 400px; margin-bottom: 40px">
 </div>
 
 <div class="container my-3" style="width: 50rem;">
   <div class="card-infos">
     <div class="card-infos-content">
-      <h2>Name:</h3><p><h2><strong><%= @service.name %><strong><h2></p>
+      <h2>Name</h3><p><h2><strong><%= @service.name %><strong><h2></p>
     </div>
     <div class="card-infos-content">
-      <h3>Category: </h3><span><h3><strong><%= @service.category %></strong></h3></span>
+      <h3>Category </h3><span><h3><strong><%= @service.category %></strong></h3></span>
     </div>
     <div class="card-infos-content">
-      <h3>Description:</h3><span><strong><h3><%= @service.description %></strong></h3></span>
+      <h3>Description</h3><span><strong><h3><%= @service.description %></strong></h3></span>
     </div>
     <div class="card-infos-content mb-3">
-      <h3>Price per hour:</h3><span><strong><h3 class ="text-primary"><%= @service.price %>$</strong><h3></span>
+      <h3>Price per hour</h3><span><strong><h3 class ="text-primary"><%= @service.price %>$</strong><h3></span>
     </div>
     <%= link_to 'Book this service', new_service_booking_path(@service), class: "btn-strong-purple" %>
   </div>
