@@ -1,5 +1,5 @@
 .navbar {
-  height: 50px !important;
+  height: 60px !important;
 }
 
 
@@ -20,13 +20,25 @@
 
 .navbar-light .navbar-nav .nav-link {
   color: white;
-}
-
- navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
-  color: $gray;
+  &:hover {
+    color: $lightpurple;
+  }
 }
 
 .navbar-toggler-icon {
   color: $lightgray;
 }
 
+li.nav-item.dropdown img {
+  margin-left: 10px;
+}
+
+.fa-gamepad {
+  font-size: 40px;
+  color: white;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
