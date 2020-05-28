@@ -1,8 +1,16 @@
 <!-- faire un loop sur les 6 card categories -->
-<div class="cards">
-  <% @services.each do |service| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= service.image %>)">
-    <%= link_to service.name, service_path(service) %> - <%= service.user.first_name %> - <%= service.price %>
-  </div>
-  <% end %>
-</div>
+<% @services.each do |service| %>
+    <%= link_to service_path(service) do %>
+    <div class="card-trip">
+      <img src=<%= service.image %> />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= service.name %></h2>
+          <p><%= service.description %></p>
+        </div>
+        <h2 class="card-trip-pricing"><%= service.price %> $</h2>
+        <img src="https://res.cloudinary.com/dhj2fdtwt/image/upload/v1590482689/taylor-harding-i4NoTSSCw5E-unsplash_cguk5u.jpg" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+    <% end %>
+<% end %>
