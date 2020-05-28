@@ -1,0 +1,46 @@
+.services-new-form {
+  background-color: $lightpurple;
+  border-radius: 10px;
+  padding: 30px 50px 50px 50px;
+  input {
+    width: 500px;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+  label {
+    color: white;
+    font-family: $body-font;
+  }
+  h3 {
+    color: white;
+    font-size: 35px;
+  }
+  form {
+    margin-top: 20px;
+  }
+}
+
+div.container.services-new {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-new-form .simple_form > input {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $strongpurple;
+  transition: background 0.3s ease;
+  font-family: $body-font;
+  border: 0;
+  margin-top: 20px;
+}
+
+.form-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
