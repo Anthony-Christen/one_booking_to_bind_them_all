@@ -6,7 +6,9 @@
   height: 80px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.4);
+  min-height: calc(100vh - 230px);
 }
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -28,4 +30,5 @@
 .footer .fab {
   color: #39086B;
 }
+
 

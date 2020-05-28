@@ -1,0 +1,60 @@
+
+<div class="container list-booking">
+  <h5 class = "border-bottom border-primary">
+    <div class ="row my-3 text-primary">
+        <div class ="col">
+          <strong>Service</strong>
+        </div>
+        <div class ="col">
+         Booking date
+        </div>
+        <div class ="col">
+          Status
+        </div>
+        <div class ="col">
+           Price
+        </div>
+        <div class ="col">
+           Provider name
+        </div>
+        <div class ="col">
+          Last name
+        </div>
+        <div class ="col">
+          Email
+        </div>
+    </div>
+  </h5>
+    <% @bookings.each do |booking| %>
+  <div class ="row">
+    <div class ="col">
+      <strong><%= booking.service.name %></strong>
+    </div>
+    <div class ="col">
+      <%= booking.date %>
+    </div>
+    <div class ="col">
+      <%= booking.statut %>
+    </div>
+    <div class ="col">
+      <%= booking.service.price %>
+    </div>
+    <div class ="col">
+      <%= booking.service.user.first_name %>
+    </div>
+    <div class ="col">
+      <%= booking.service.user.last_name %>
+    </div>
+    <div class ="col">
+         <a href="mailto:contact@onecoachingtobindthemall.com">  <%= booking.service.user.email %> </a>
+    </div>
+  </div>
+  <% end %>
+ </div>
+
+
+
+
+
+
+
