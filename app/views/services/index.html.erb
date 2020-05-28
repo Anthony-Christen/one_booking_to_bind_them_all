@@ -3,17 +3,8 @@
   <%= link_to 'Create service', new_service_path(@service), class: "btn-flat" %>
 </div>
 
-<div class="container">
-  <ul class="services-index-flexbox">
-    <% @services.each do |service| %>
-      <li>
-        <%= link_to service_path(service) do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= service.image %>)">
-            <%= service.name %>
-          </div>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
+<div class="container my-4">
+  <div class="cards">
+      <%= render "components/card-category" %>
+  </div>
 </div>
-

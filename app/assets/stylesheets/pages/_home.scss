@@ -1,28 +1,35 @@
 // Specific CSS for your home-page
 body {
-  font-family: roboto;
+  font-family: $body-font;
   background-color: white;
 }
 
 h1 {
-  font-family: roboto;
+  font-family: $body-font;
   font-weight: 60px;
   color: $strongpurple;
 }
 
 
 h2 {
-  font-family: roboto;
+  font-family: $body-font;
   font-weight: 60px;
   color: $mediumpurple;
 }
 
 p {
-  font-family: roboto;
+  font-family: $body-font;
   font-weight: 36px;
   color: $gray;
 }
 
 .footer {
   background-color: $strongpurple;
+  margin-top: 40px;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
 }

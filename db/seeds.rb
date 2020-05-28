@@ -50,7 +50,7 @@ service = Service.new(
 service.save!
 service = Service.new(
   name: "Call Of Duty",
-  description: "Want to new skins we get them for you with a bonus of extra levels",
+  description: "Want to new skins we get them for you.",
   price: 30,
   image: "https://www.activision.com/content/dam/atvi/callofduty/cod-touchui/warzone/social/wz-social-share.jpg",
   category: Faker::Game.genre,
