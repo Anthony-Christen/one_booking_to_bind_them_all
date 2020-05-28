@@ -1,5 +1,8 @@
-<div class="container">
-  <div class="services-new-flexbox">
+<div class="container services-new">
+  <div class="services-new-form">
+    <div class="form-title">
+      <h3>Create a new service</h3>
+    </div>
     <%= simple_form_for @service do |f| %>
       <%= f.input :name %>
       <%= f.input :description %>
