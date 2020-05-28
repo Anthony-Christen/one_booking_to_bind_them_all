@@ -23,20 +23,78 @@ puts 'Creating 12 fake users...'
 end
 puts 'Fake users finished!'
 
-
-puts 'Creating 10 services...'
-10.times do
-  service = Service.new(
-    name: Faker::Game.title,
-    description: Faker::GreekPhilosophers.quote,
-    price: rand(20..125),
-    image: Faker::LoremPixel.image(size: "200x300", is_gray: false, category: 'abstract'),
-    category:Faker::Game.genre,
-    user: User.all.sample
-    )
-  service.save!
-end
-
+service = Service.new(
+  name: "fortnight",
+  description: "pro player level 100",
+  price: 30,
+  image: "https://cdn2.unrealengine.com/Fortnite%2Fhome-v2%2FASPOT_Image-3840x2308-35330d4be45373960682e7ef88da5b4c2d8e790f.jpg",
+  category: Faker::Game.genre,
+  user: User.all.sample
+  )
+service.save!
+service = Service.new(
+  name: "Call Of Duty",
+  description: "Want to new skins we get them for you with a bonus of extra levels",
+  price: 30,
+  image: "https://www.activision.com/content/dam/atvi/callofduty/cod-touchui/warzone/social/wz-social-share.jpg",
+  category: Faker::Game.genre,
+  user: User.all.sample
+  )
+service.save!
+service = Service.new(
+  name: "Rainbow Six",
+  description: "Gain extra money for skins and leagues",
+  price: 30,
+  image: "https://www.digiseller.ru/preview/748667/p1_2597316_e69f5bd8.jpg",
+  category: Faker::Game.genre,
+  user: User.all.sample
+  )
+service.save!
+service = Service.new(
+  name: "The divison",
+  description: "Unlock new parts of the map",
+  price: 30,
+  image: "https://cdn-cf.gamivo.com/image_cover.jpg?f=1459&n=c8eb7380-7850-11e7-8203-abacaa3272cd.jpg&h=db5af4eb5a0056309f5454984b7da486",
+  category: Faker::Game.genre,
+  user: User.all.sample
+  )
+service.save!
+service = Service.new(
+  name: "Great Theft Auto",
+  description: "gain rp and cash",
+  price: 30,
+  image: "https://www.use-media.com/admin/files/pictures/2283/2283_4196_750_gta-5-artikelbild.jpg",
+  category: Faker::Game.genre,
+  user: User.all.sample
+  )
+service.save!
+service = Service.new(
+  name: "Mario",
+  description: "Stuck at a certain level or just want to duo",
+  price: 30,
+  image: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_NewSuperMarioBrosUDeluxe_image1600w.jpg",
+  category: Faker::Game.genre,
+  user: User.all.sample
+  )
+service.save!
+service = Service.new(
+  name: "FiFa",
+  description: "Do you want to be part of the Frist League",
+  price: 30,
+  image: "https://image-cdn.essentiallysports.com/wp-content/uploads/20200418223918/fifa-20-button-2020-1568061446797-1600x1600.jpg",
+  category: Faker::Game.genre,
+  user: User.all.sample
+  )
+service.save!
+service = Service.new(
+  name: "The Last Of Us",
+  description: "Stuck on a certain level or just at a boring part",
+  price: 30,
+  image: "https://images-na.ssl-images-amazon.com/images/I/71lVmaGKEGL._AC_SY741_.jpg",
+  category: Faker::Game.genre,
+  user: User.all.sample
+  )
+service.save!
 puts 'Creating 10 bookings...'
 8.times do
   booking = Booking.new(
