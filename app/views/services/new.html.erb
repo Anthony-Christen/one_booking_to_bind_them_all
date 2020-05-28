@@ -1,11 +1,11 @@
-<h1>Gamers, your skills are valued</h1>
-
-<%= simple_form_for @service do |f| %>
-  <div class="name222">
-    <%= f.input :name %>
+<div class="container">
+  <div class="services-new-flexbox">
+    <%= simple_form_for @service do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :category %>
+      <%= f.input :price %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 </div>
-  <%= f.input :description %>
-  <%= f.input :category %>
-  <%= f.input :price %>
-  <%= f.submit %>
-<% end %>
