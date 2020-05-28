@@ -1,0 +1,21 @@
+<div class="container my-4" style="text-align: center">
+  <h1 style="margin: 30px 0">My services</h1>
+  <div class="my-services">
+    <% current_user.services.each do |service| %>
+    <%= link_to service_path(service) do %>
+      <div class="card-trip">
+        <img src=<%= service.image %> />
+        <div class="card-trip-infos">
+        <div>
+          <h2><%= service.name %></h2>
+          <p><%= service.description %></p>
+        </div>
+          <h2 class="card-trip-pricing"><%= service.price %> $</h2>
+          <img src="https://res.cloudinary.com/dhj2fdtwt/image/upload/v1590482689/taylor-harding-i4NoTSSCw5E-unsplash_cguk5u.jpg" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+
+</div>
