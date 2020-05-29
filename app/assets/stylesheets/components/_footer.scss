@@ -6,11 +6,21 @@
   height: 80px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.4);
+
+
+.footer-copyright a {
+color:white;
+}
+  a:hover {
+  text-decoration: underline;
+  color:$mediumpurple;
+  }
 }
 
 .footer-links {
   display: flex;
   align-items: center;
+  color:$lightpurple
 }
 .footer-links a {
   color: black;
@@ -27,7 +37,7 @@
 }
 
 .footer .fab {
-  color: #39086B;
+  color: $mediumpurple;
 }
 
 
