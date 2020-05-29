@@ -4,7 +4,7 @@
     <% current_user.services.each do |service| %>
     <%= link_to service_path(service) do %>
       <div class="card-trip">
-        <img src=<%= service.image %> />
+         <%= cl_image_tag service.photo.key, height:300, width:400, crop: :fill %>
         <div class="card-trip-infos">
         <div class="my-services-content">
           <h2><%= service.name %></h2>
