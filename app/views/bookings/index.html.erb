@@ -12,16 +12,13 @@
           Status
         </div>
         <div class ="col">
-           Duration
+           Duration (in mn)
         </div>
         <div class ="col">
-           Price
+           Total Price
         </div>
         <div class ="col">
-           Provider name
-        </div>
-        <div class ="col">
-          Last name
+           Pro name
         </div>
         <div class ="col">
           Email
@@ -43,13 +40,10 @@
       <%= booking.duration %>
     </div>
     <div class ="col">
-      <%= booking.service.price %>
+      <%= booking.service.price*booking.duration/60 %> $
     </div>
     <div class ="col">
-      <%= booking.service.user.first_name %>
-    </div>
-    <div class ="col">
-      <%= booking.service.user.last_name %>
+      <%= booking.service.user.first_name %>  <%= booking.service.user.last_name %>
     </div>
     <div class ="col">
          <a href="mailto:contact@onecoachingtobindthemall.com">  <%= booking.service.user.email %> </a>
