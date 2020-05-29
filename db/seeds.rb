@@ -18,24 +18,24 @@ puts 'Deleting users...'
 User.destroy_all
 
 puts 'Creating user antho...'
-user = User.new(
+anthony = User.new(
     first_name: "Anthony",
     last_name: "Christen",
     email:    "antho@gmail.com",
     password: "123456",
     role: ["provider", "customer"].sample
     )
-user.save!
+anthony.save!
 
 puts 'Creating user Alex...'
-user = User.new(
+alex = User.new(
     first_name: "Alexandre",
     last_name: "Bouvier",
     email:    "alex@gmail.com",
     password: "azerty",
     role: ["provider", "customer"].sample
     )
-user.save!
+alex.save!
 
 puts 'Creating 12 fake users...'
 12.times do
@@ -50,27 +50,27 @@ puts 'Creating 12 fake users...'
 end
 puts 'Fake users finished!'
 
-service = Service.new(
+fortnite = Service.new(
   name: "Fortnite",
   description: "pro player level 100",
   price: rand(30..150),
   category: Faker::Game.genre,
-  user: User.all.sample
+  user: anthony
   )
 file = URI.open("https://cdn2.unrealengine.com/Fortnite%2Fhome-v2%2FASPOT_Image-3840x2308-35330d4be45373960682e7ef88da5b4c2d8e790f.jpg")
-service.photo.attach(io: file, filename: 'Fortnite', content_type: 'image/jpg')
-service.save!
+fortnite.photo.attach(io: file, filename: 'Fortnite', content_type: 'image/jpg')
+fortnite.save!
 
-service = Service.new(
+call_of = Service.new(
   name: "Call Of Duty",
   description: "Want to new skins we get them for you.",
   price: 30,
   category: Faker::Game.genre,
-  user: User.all.sample
+  user: anthony
   )
 file = URI.open("https://www.activision.com/content/dam/atvi/callofduty/cod-touchui/warzone/social/wz-social-share.jpg")
-service.photo.attach(io: file, filename: 'Call Of Duty', content_type: 'image/jpg')
-service.save!
+call_of.photo.attach(io: file, filename: 'Call Of Duty', content_type: 'image/jpg')
+call_of.save!
 
 service = Service.new(
   name: "Rainbow Six",
@@ -152,5 +152,23 @@ puts 'Creating 10 bookings...'
   booking.save!
 end
 puts 'Fake booking finished!'
+
+booking = Booking.new(
+    date:Faker::Date.in_date_period(month: 2),
+    statut: "confirmed",
+    duration: [30, 60, 120, 180].sample,
+    service: fornite,
+    user: User.all.sample
+    )
+  booking.save!
+
+  booking = Booking.new(
+    date:Faker::Date.in_date_period(month: 2),
+    statut: "cancelled"],
+    duration: [30, 60, 120, 180].sample,
+    service: call_of,
+    user: User.all.sample
+    )
+  booking.save!
 
 
