@@ -164,7 +164,7 @@ booking = Booking.new(
 
   booking = Booking.new(
     date:Faker::Date.in_date_period(month: 2),
-    statut: "cancelled"],
+    statut: "cancelled",
     duration: [30, 60, 120, 180].sample,
     service: call_of,
     user: User.all.sample
