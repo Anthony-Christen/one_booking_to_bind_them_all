@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
+require "open-uri"
 
 #faking users
 puts 'Deleting bookings...'
@@ -53,74 +54,92 @@ service = Service.new(
   name: "Fortnite",
   description: "pro player level 100",
   price: rand(30..150),
-  image: "https://cdn2.unrealengine.com/Fortnite%2Fhome-v2%2FASPOT_Image-3840x2308-35330d4be45373960682e7ef88da5b4c2d8e790f.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
   )
+file = URI.open("https://cdn2.unrealengine.com/Fortnite%2Fhome-v2%2FASPOT_Image-3840x2308-35330d4be45373960682e7ef88da5b4c2d8e790f.jpg")
+service.photo.attach(io: file, filename: 'Fortnite', content_type: 'image/jpg')
 service.save!
+
 service = Service.new(
   name: "Call Of Duty",
   description: "Want to new skins we get them for you.",
   price: 30,
-  image: "https://www.activision.com/content/dam/atvi/callofduty/cod-touchui/warzone/social/wz-social-share.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
   )
+file = URI.open("https://www.activision.com/content/dam/atvi/callofduty/cod-touchui/warzone/social/wz-social-share.jpg")
+service.photo.attach(io: file, filename: 'Call Of Duty', content_type: 'image/jpg')
 service.save!
+
 service = Service.new(
   name: "Rainbow Six",
   description: "Gain extra money for skins and leagues",
   price: rand(30..150),
-  image: "https://www.digiseller.ru/preview/748667/p1_2597316_e69f5bd8.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
   )
+file = URI.open("https://www.digiseller.ru/preview/748667/p1_2597316_e69f5bd8.jpg")
+service.photo.attach(io: file, filename: 'The divison', content_type: 'image/jpg')
 service.save!
+
 service = Service.new(
   name: "The divison",
   description: "Unlock new parts of the map",
   price: 30,
-  image: "https://cdn-cf.gamivo.com/image_cover.jpg?f=1459&n=c8eb7380-7850-11e7-8203-abacaa3272cd.jpg&h=db5af4eb5a0056309f5454984b7da486",
   category: Faker::Game.genre,
   user: User.all.sample
   )
+file = URI.open("https://cdn-cf.gamivo.com/image_cover.jpg?f=1459&n=c8eb7380-7850-11e7-8203-abacaa3272cd.jpg&h=db5af4eb5a0056309f5454984b7da486")
+service.photo.attach(io: file, filename: 'The divison', content_type: 'image/jpg')
 service.save!
+
 service = Service.new(
   name: "Great Theft Auto",
   description: "gain rp and cash",
   price: rand(30..150),
-  image: "https://www.use-media.com/admin/files/pictures/2283/2283_4196_750_gta-5-artikelbild.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
   )
+file = URI.open("https://www.use-media.com/admin/files/pictures/2283/2283_4196_750_gta-5-artikelbild.jpg")
+service.photo.attach(io: file, filename: 'Great Theft Auto', content_type: 'image/jpg')
 service.save!
+
 service = Service.new(
   name: "Mario",
   description: "Stuck at a certain level or just want to duo",
   price: 30,
-  image: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_NewSuperMarioBrosUDeluxe_image1600w.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
   )
+file = URI.open("https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_NewSuperMarioBrosUDeluxe_image1600w.jpg")
+service.photo.attach(io: file, filename: 'FiFa', content_type: 'image/jpg')
 service.save!
+
 service = Service.new(
   name: "FiFa",
   description: "Do you want to be part of the Frist League",
   price: rand(30..150),
-  image: "https://image-cdn.essentiallysports.com/wp-content/uploads/20200418223918/fifa-20-button-2020-1568061446797-1600x1600.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
   )
+file = URI.open("https://image-cdn.essentiallysports.com/wp-content/uploads/20200418223918/fifa-20-button-2020-1568061446797-1600x1600.jpg")
+service.photo.attach(io: file, filename: 'FiFa', content_type: 'image/jpg')
+
 service.save!
+
 service = Service.new(
   name: "The Last Of Us",
   description: "Stuck on a certain level or just at a boring part",
   price: rand(30..150),
-  image: "https://nationeditions.com/wp-content/uploads/2020/03/lastofus-696x442.jpg",
   category: Faker::Game.genre,
   user: User.all.sample
   )
+
+file = URI.open("https://nationeditions.com/wp-content/uploads/2020/03/lastofus-696x442.jpg")
+service.photo.attach(io: file, filename: 'TheLastOfUs', content_type: 'image/jpg')
 service.save!
+
 puts 'Creating 10 bookings...'
 8.times do
   booking = Booking.new(
@@ -133,4 +152,5 @@ puts 'Creating 10 bookings...'
   booking.save!
 end
 puts 'Fake booking finished!'
+
 
