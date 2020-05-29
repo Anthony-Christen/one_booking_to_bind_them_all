@@ -2,7 +2,7 @@
   <div class="services-new-form">
     <div class="form-title">
       <h3>Book a "<%= @service.name %>" coaching</h3>
-      <p style="color: white">with <%= @service.user.first_name %> <%= @service.user.last_name %></p>
+      <p style="color: white">with Pro <%= @service.user.first_name %> <%= @service.user.last_name %></p>
     </div>
     <%= simple_form_for [@service, @booking] do |f| %>
       <%= f.input :date %>
