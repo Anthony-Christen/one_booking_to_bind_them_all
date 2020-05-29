@@ -4,10 +4,10 @@
       <h3>Create a new service</h3>
     </div>
     <%= simple_form_for @service do |f| %>
-      <%= f.input :name %>
-      <%= f.input :description %>
+      <%= f.input :name, :placeholder => 'Call Of Duty, FIFA, Fortnite,...' %>
+      <%= f.input :description, :placeholder => 'I will help you to improve your level.' %>
       <%= f.input :category, collection: Service::CATEGORIES, input_html: {class: "w-100"} %>
-      <%= f.input :price %>
+      <%= f.input :price, :placeholder => '30' %>
       <%= f.submit %>
     <% end %>
   </div>
