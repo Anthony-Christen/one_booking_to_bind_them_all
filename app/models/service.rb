@@ -3,6 +3,6 @@ class Service < ApplicationRecord
   has_many :bookings
   belongs_to :user
 
-  validates :name, :description, :price, :category, presence: true
+  validates :name, :description, :price, :category, :photo, presence: true
   has_one_attached :photo
 end
