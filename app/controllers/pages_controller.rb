@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-  @services = Service.all.limit(6)
+  @services = Service.all
   end
 
   def my_services
