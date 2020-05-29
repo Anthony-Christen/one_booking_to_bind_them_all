@@ -7,7 +7,7 @@
       <%= f.input :name, :placeholder => 'Call Of Duty, FIFA, Fortnite,...' %>
       <%= f.input :description, :placeholder => 'I will help you to improve your level.' %>
       <%= f.input :category, collection: Service::CATEGORIES, input_html: {class: "w-100"} %>
-      <%= f.input :price, :placeholder => '30' %>
+      <%= f.input :price,label: "Price per hour", :placeholder => '30' %>
       <%= f.submit %>
     <% end %>
   </div>
