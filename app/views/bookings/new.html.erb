@@ -6,7 +6,7 @@
     </div>
     <%= simple_form_for [@service, @booking] do |f| %>
       <%= f.input :date %>
-      <%= f.input :duration, :placeholder => '60' %>
+      <%= f.input :duration, label: "Duration (in mn)", :placeholder => '60' %>
       <%= f.submit %>
     <% end %>
   </div>
