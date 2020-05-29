@@ -3,6 +3,7 @@
     <div class="form-title">
       <h3>Book a "<%= @service.name %>" coaching</h3>
       <p style="color: white">with Pro <%= @service.user.first_name %> <%= @service.user.last_name %></p>
+      <p style="color: white">(<%= @service.price %> $/hour)</p>
     </div>
     <%= simple_form_for [@service, @booking] do |f| %>
       <%= f.input :date %>
