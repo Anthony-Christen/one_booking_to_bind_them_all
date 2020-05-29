@@ -8,6 +8,7 @@
       <%= f.input :description, :placeholder => 'I will help you to improve your level.' %>
       <%= f.input :category, collection: Service::CATEGORIES, input_html: {class: "w-100"} %>
       <%= f.input :price,label: "Price per hour", :placeholder => '30' %>
+      <%= f.input :photo, as: :file %>
       <%= f.submit %>
     <% end %>
   </div>

@@ -26,7 +26,7 @@ user = User.new(
     )
 user.save!
 
-puts 'Creating user antho...'
+puts 'Creating user Alex...'
 user = User.new(
     first_name: "Alexandre",
     last_name: "Bouvier",
